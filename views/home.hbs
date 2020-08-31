@@ -1,0 +1,37 @@
+{{>header}}
+<div class="container">
+    <div class="row space-top">
+      <div class="col-md-12">
+        <h1>Welcome to Furniture System</h1>
+        <p>Select furniture from the catalog to view details.</p>
+      </div>
+    </div>
+    <div class="row space-top">
+    {{#if hasFurniture}}
+      {{#each furnitureItem}}
+        <div class="col-md-4">
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+              <blockquote class="card-blockquote">
+                <img src="{{img}}" />
+                <p>{{description}}</p>
+                <footer>Made by {{maker}} in,
+                  <cite title="{{year}}">{{year}}</cite>
+                </footer>
+                <div class="pull-right">
+                  <a href="#/furniture/details/{{_id}}" class="btn btn-info">Details</a>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+      {{else}}
+       <div class="col-md-4">
+         <h2> No Furniture Available</h2>
+         <p>There is no furniture in our catalog, if you'd like to sell furniture on the site, please login and add it.</p>
+
+       </div>
+      {{/if}}
+    </div>
+  </div>

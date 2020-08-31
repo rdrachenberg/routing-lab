@@ -1,0 +1,38 @@
+{{>header}}
+<div class="container">
+    <div class="row space-top">
+      <div class="col-md-12">
+        <h1>Furniture Details</h1>
+      </div>
+    </div>
+    <div class="row space-top">
+      <div class="col-md-4">
+        <div class="card text-white bg-primary">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+              <img src="{{details.img}}" />
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <p>Make: {{details.make}}</p>
+        <p>Model: {{details.model}}</p>
+        <p>Year: {{details.year}}</p>
+        <p>Description: {{details.description}}</p>
+        <p>Price: {{details.price}}</p>
+        <p>Material: {{details.material}}</p>
+      </div>
+    </div>
+  </div>
+   {{!-- {
+     *  id: number,
+     *  maker: string no longer than 50 characters,
+     *  make: must be at least 4 symbols long, 
+     *  model: must be at least 4 symbols long,
+     *  year: must be between 1950 and 2050,
+     *  description: must be more than 10 symbols,
+     *  price: must be a positive number,
+     *  imageURL: is required
+     *  material: no longer than 20 character - is optional
+     * } --}}
